@@ -11,7 +11,7 @@ import sys
 
 # Try to import Pydantic, provide fallback if not available
 try:
-    from pydantic import BaseModel, Field, validator
+    from pydantic import BaseModel, Field, field_validator
     USING_PYDANTIC = True
 except ImportError:
     print("Note: Pydantic is not installed. Using basic data classes without validation.")
@@ -35,9 +35,9 @@ except ImportError:
         """Placeholder for Pydantic Field."""
         return None
     
-    # Simple placeholder for validator
-    def validator(*args, **kwargs):
-        """Placeholder for Pydantic validator."""
+    # Simple placeholder for field_validator
+    def field_validator(*args, **kwargs):
+        """Placeholder for Pydantic field_validator."""
         def decorator(func):
             return func
         return decorator
@@ -65,7 +65,8 @@ class ENTSOELoadData(BaseModel):
         load_mw: float = Field(gt=0)  # Positive-only value
         region: str
         
-        @validator('timestamp')
+        @field_validator('timestamp')
+        @classmethod
         def check_timestamp_not_future(cls, value):
             """Validate that timestamp is not in the future."""
             if value > datetime.now():
