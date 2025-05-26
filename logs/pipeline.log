@@ -86,3 +86,47 @@ region       0
 2025-05-25 at 14:36:49 | INFO | __main__:explore_data:171 - --- Creating visualization ---
 2025-05-25 at 14:36:50 | SUCCESS | __main__:explore_data:208 - Plot saved to /Users/masinde/pytorch-test/Data_Engineer/energy-data-pipeline/data/load_visualization.png
 2025-05-25 at 14:36:50 | SUCCESS | __main__:explore_data:214 - Validated data saved to /Users/masinde/pytorch-test/Data_Engineer/energy-data-pipeline/data/validated_load_data.json
+2025-05-25 at 20:08:14 | INFO | __main__:load_and_validate_data:72 - Loading data from /Users/masinde/pytorch-test/Data_Engineer/energy-data-pipeline/data/entsoe_load.csv
+2025-05-25 at 20:08:14 | SUCCESS | __main__:load_and_validate_data:111 - Successfully loaded and validated 24 records
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:139 - Converting validated data back to DataFrame for analysis
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:143 - --- Data Overview ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:144 - Shape: (24, 3)
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:145 - --- First 5 rows ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:146 - 
+            timestamp  load_mw   region
+0 2024-01-01 00:00:00   8520.5  Finland
+1 2024-01-01 01:00:00   8350.2  Finland
+2 2024-01-01 02:00:00   8125.8  Finland
+3 2024-01-01 03:00:00   7980.3  Finland
+4 2024-01-01 04:00:00   7895.1  Finland
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:148 - --- Data Types ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:149 - 
+timestamp    datetime64[ns]
+load_mw             float64
+region               object
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:151 - --- Summary Statistics ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:152 - 
+                 timestamp       load_mw
+count                   24     24.000000
+mean   2024-01-01 11:30:00   9199.833333
+min    2024-01-01 00:00:00   7895.100000
+25%    2024-01-01 05:45:00   8477.925000
+50%    2024-01-01 11:30:00   9550.750000
+75%    2024-01-01 17:15:00   9790.400000
+max    2024-01-01 23:00:00  10250.800000
+std                    NaN    770.050336
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:154 - --- Null Values ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:155 - 
+timestamp    0
+load_mw      0
+region       0
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:158 - --- Time Range ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:160 - Time range: 2024-01-01 00:00:00 to 2024-01-01 23:00:00
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:164 - --- Batch Statistics ---
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:165 - Count: 24
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:166 - Average load: 9199.83 MW
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:167 - Min load: 7895.10 MW
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:168 - Max load: 10250.80 MW
+2025-05-25 at 20:08:14 | INFO | __main__:explore_data:171 - --- Creating visualization ---
+2025-05-25 at 20:08:14 | SUCCESS | __main__:explore_data:208 - Plot saved to /Users/masinde/pytorch-test/Data_Engineer/energy-data-pipeline/data/load_visualization.png
+2025-05-25 at 20:08:14 | SUCCESS | __main__:explore_data:214 - Validated data saved to /Users/masinde/pytorch-test/Data_Engineer/energy-data-pipeline/data/validated_load_data.json
